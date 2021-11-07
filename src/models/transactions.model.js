@@ -1,4 +1,4 @@
-import db from "./index";
+import db from "./db";
 
 export default class Transactions {
   constructor() {
