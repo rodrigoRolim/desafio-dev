@@ -10,17 +10,17 @@ export default {
 
     const records = datas.map(data => {
       return {
-        type: data.substring(0,1),
-        date: data.substring(1, 9),
-        value: data.substring(9, 19),
+        type_transaction: +data.substring(0,1),
+        transaction_value: +data.substring(9, 19),
         cpf: data.substring(19, 30),
-        card: data.substring(30, 42),
-        hour: data.substring(42, 48),
-        owner: data.substring(48, 62),
-        store: data.substring(62, 81)
+        card_number: data.substring(30, 42),
+        date_created: data.substring(1, 9).replace(/(\d{4})(\d{2})(\d{2})/g, '$1-$2-$3').split("-").reverse().join("-"),
+        hour_created: data.substring(42, 48).replace(/(\d{2})(\d{2})(\d{2})/g, '$1:$2:$3'),
+        store_own: data.substring(48, 62),
+        store_name: data.substring(62, 81)
       }
     })
-    
+    console.log(records);
     req.records = records;
     next();
   }
