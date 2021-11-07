@@ -24,6 +24,6 @@ export default class Transactions {
     ])
   }
   async getAll() {
-    
+    return await db.query('SELECT * FROM transactions');
   }
 }
