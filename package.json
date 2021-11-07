@@ -1,0 +1,19 @@
+{
+  "name": "desafio-dev",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "serve": "babel-node ./src/app",
+    "start": "nodemon --exec npm run serve"
+  },
+  "dependencies": {
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "nodemon": "^2.0.14",
+    "pg": "^8.7.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-node6": "^11.0.0"
+  }
+}
