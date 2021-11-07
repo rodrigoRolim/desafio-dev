@@ -1,5 +1,5 @@
 import express from "express";
-import transactions from "./transactions.route";
+import transactions from "./transactions.routes";
 
 const router = express.Router();
 
