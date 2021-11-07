@@ -1,0 +1,28 @@
+body {
+  padding: 0px;
+  margin: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.Container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.Container__Form {
+  margin-top: 4rem;
+}
+.Container__Group {
+  display: flex;
+  flex-direction: column;
+}
+.Container__Label {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  text-transform: capitalize;
+}
