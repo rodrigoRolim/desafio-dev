@@ -6,5 +6,6 @@ const router = express.Router();
 const transactions = new TransactionController(Transaction);
 
 router.get('/', transactions.getAllTransactions);
+router.post('/save', transactions.save);
 
-module.exports = router;
+export default router;
