@@ -5,3 +5,7 @@
 
 # Executar o projeto
 para executar o projeto instale as dependencias com `npm install` e inicie o projeto com `npm start`
+
+# Considerações
+Não conseguir fazer a tempo o docker-compose e nem dockerfile. Não consegui tempo também
+para fazer a listagem com os saldos totais de cada loja.
