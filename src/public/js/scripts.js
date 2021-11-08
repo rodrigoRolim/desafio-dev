@@ -3,11 +3,17 @@
 
     let formData = new FormData();
     formData.append("file", file, "cnab.txt");
+    try {
 
-    const response = await fetch('/transactions/save', {
-      method: 'POST',
-      body: formData
-    });
+      await fetch('/transactions/save', {
+        method: 'POST',
+        body: formData
+      });
+      alert("upload realizado com sucesso");
+    } catch (err) {
+      console.error(err)
+    }
+ 
   }
 
   const file = document.getElementById("file");
