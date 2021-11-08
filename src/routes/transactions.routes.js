@@ -1,7 +1,7 @@
 import express from "express";
 import TransactionController from "../controllers/transactions.control";
 import Transactions from "../models/transactions.model";
-import cnabToJson from "../middlewares/json-converter.middle";
+import cnabToJson from "../middlewares/cnab-converter.middle";
 
 import multer from "multer";
 const upload = multer({ dest: 'uploads/' });

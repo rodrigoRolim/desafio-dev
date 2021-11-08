@@ -1,15 +1,12 @@
 import db from "./db";
-
-import { Inserts } from "../helpers/insert-mulple";
+import format from "pg-format";
 
 class Transactions {
   constructor() {
 
   }
-  async save(datas) {
-    const values = Inserts('${type_transaction}, ${transaction_value}, ${cpf}, ${card_number}, ${date_created}, ${hour_created}, ${store_own}, ${store_name}', datas);
-    
-    return await db.none('INSERT INTO transactions (type_transaction,transaction_value,cpf,card_number,date_created,hour_created,store_own,store_name) VALUES $1', values);
+  async save(datas) {  
+    return await db.query(format('INSERT INTO transactions (type_transaction,transaction_value,cpf,card_number,date_created,hour_created,store_own,store_name) VALUES %L', datas));
   }
   async getAll() {
     return await db.query('SELECT * FROM transactions');
