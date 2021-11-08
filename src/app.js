@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import routes from "./routes";
 
+
 const app = express();
 
 app.use(function(req, res, next) {
@@ -27,4 +28,4 @@ app.get("/", (req, res) => {
 
 app.listen(3000, () => {
   console.log("3000")
-})
+});
